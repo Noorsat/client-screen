@@ -10,7 +10,7 @@ import { useDispatch } from 'react-redux';
 import { setOpenModal } from 'src/store/modal/modalSlice';
 import { unlockSeat } from 'src/store/ticket';
 import * as io from "socket.io-client";
-const socket = io.connect('localhost:5000');
+const socket = io.connect('192.168.70.150:3000');
 
 export default function BottomPanel(props: BottomPanelTypes.IProps) {
   const navigate = useNavigate();

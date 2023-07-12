@@ -27,7 +27,7 @@ import { getHallPlan, getSeatsStatus } from 'src/store/hallMap/actions';
 import kzFlag from 'src/assets/images/kz_d.png';
 import engFlag from 'src/assets/images/eng_d.png';
 import * as io from "socket.io-client";
-const socket = io.connect('localhost:5000');
+const socket = io.connect('192.168.70.150:3000');
 
 
 

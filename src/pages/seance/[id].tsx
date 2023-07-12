@@ -37,7 +37,7 @@ import { LoadingOutlined } from '@ant-design/icons';
 import {Spin, notification} from 'antd';
 import {Modal} from 'antd';
 import * as io from "socket.io-client";
-const socket = io.connect('localhost:5000');
+const socket = io.connect('192.168.70.150:3000');
 
 export function Seance() {
   const params = useParams();
