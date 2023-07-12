@@ -1,0 +1,50 @@
+@import "src/assets/scss/vars.scss";
+@import "mixins";
+
+$loading_default_size: 30px;
+$loading_border_default_size: 4px;
+
+.loading {
+  display: inline-block;
+  border-radius: 50%;
+  border-style: solid;
+  animation: loading .6s infinite linear;
+  @include set-loading-color(black);
+  @include set-loading-size($loading_default_size);
+  @include set-loading-border-size($loading_border_default_size);
+}
+
+.loading.center, .loading.translate_center {
+  animation: centered-loading .6s infinite linear;
+}
+
+@keyframes loading {
+  from {transform: rotate(0deg); }
+  to { transform: rotate(359deg); }
+}
+
+@keyframes centered-loading {
+  from {transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(359deg); }
+}
+
+$loading_colors_prefix: 'loading__color';
+@each $key, $value in $colors {
+  .#{$loading_colors_prefix}-#{$key}.loading {
+    @include set-loading-color($value);
+  }
+}
+
+$loading_size_prefix: 'loading__size';
+@for $i from 1 through 10 {
+  .#{$loading_size_prefix}-#{$i}.loading {
+    @include set-loading-size(#{$i * 10}px);
+  }
+}
+
+$loading_border_size_prefix: 'loading__border-size';
+@for $i from 1 through 10 {
+  .#{$loading_border_size_prefix}-#{$i}.loading {
+    @include set-loading-border-size(#{$i}px);
+  }
+}

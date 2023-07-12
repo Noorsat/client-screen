@@ -1,0 +1,77 @@
+// Family fonts
+$fonts: 'Open Sans', sans-serif;
+
+// 50 shades of scss.
+$red_500: #C31D28;
+$red_300: #FF5656;
+$yellow_300: #FFD362;
+$blue_500: #0176E2;
+$blue_300: #0094D3;
+$black_500: #0E0E0E;
+$black_300: #141414;
+$black_700: #373D3F;
+$grey_700: #4E4E4E;
+$grey_500: #AAAAAA;
+$grey_300: #DDDDDD;
+$gradient_red: #210A0B;
+$gradient_grey: rgba(78, 78, 78, 0.2);
+$gradient_black: #202020;
+$orange: #FFC224;
+
+
+// Colors
+$red: $red_500;
+$light_red: $red_300;
+$yellow: $yellow_300;
+$blue: $blue_500;
+$light_blue: $blue_300;
+$black: $black_500;
+$black_700: $black_700;
+$background_black: $black_300;
+$dark_grey: $grey_700;
+$grey: $grey_500;
+$light_grey: $grey_300;
+$white: #ffffff;
+$footer_color: #F5F6F8;
+$secondary: #8C8D93;
+
+// Mapped colors
+$colors: (
+  red: $red,
+  light_red: $light_red,
+  yellow: $yellow,
+  blue: $blue,
+  light_blue: $light_blue,
+  black: $black,
+  black_700: $black_700,
+  background_black: $black_300,
+  dark_grey: $dark_grey,
+  grey: $grey,
+  light_grey: $light_grey,
+  white: $white,
+  gradient_grey: $gradient_grey,
+  gradient_black: $gradient_black,
+  footer_color: $footer_color,
+  secondary: $secondary,
+);
+
+// Typography
+$h1_size: 3rem;
+$h2_size: 2.25rem;
+$h3_size: 1.5rem;
+$body_size: 1rem;
+$sub_body_size: 0.8125rem;
+$caption_size: 0.625rem;
+
+$bold_weight: 700;
+$regular_weight: 500;
+$light_weight: 300;
+
+// Responsive layouts
+$small_device: 576px;
+$medium_device: 768px;
+$large_device: 992px;
+$extra_large_device: 1200px;
+
+// Border Radius
+$base_border_radius: 3px;

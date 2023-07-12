@@ -1,0 +1,404 @@
+### version 0.1.1:react.docker.only
+variables:
+  GIT_DEPTH: 1
+
+stages:
+  - deploy
+
+.prod-only: &prod-only
+  environment: prod
+  variables:
+    CI_REGISTRY_IMAGE_TAG: prod
+  only:
+    - tags
+    - /^release.*$/
+  when: manual
+
+.preprod-only: &preprod-only
+  environment: deploy
+  variables:
+    CI_REGISTRY_IMAGE_TAG: preprod
+  only:
+    - tags
+    - develop
+    - /^feature.*$/
+    - /^bugfix.*$/
+    - /^hotfix.*$/
+
+deploy:docker:test:
+  stage: deploy
+  tags: [deploy.ducket.kassa.test]
+  <<: *preprod-only
+  script:
+    - make variables
+    - make clean
+    - make structure
+    - make docker-build
+    - make docker-login
+    - make docker-publish-registry
+    - make docker-deploy
+    - make docker-logout
+
+deploy:docker:shmmega.kinopark.kz_11:
+  stage: deploy
+  tags: [deploy.ducket.kassa.shmmega.kinopark.kz_11]
+  <<: *prod-only
+  script:
+    - make variables
+    - make clean
+    - make structure
+    - make docker-build
+    - make docker-login
+    - make docker-publish-registry
+    - make docker-deploy
+    - make docker-logout
+
+deploy:docker:astmega.kinopark.kz_12:
+  stage: deploy
+  tags: [deploy.ducket.kassa.astmega.kinopark.kz_12]
+  <<: *prod-only
+  script:
+    - make variables
+    - make clean
+    - make structure
+    - make docker-build
+    - make docker-login
+    - make docker-publish-registry
+    - make docker-deploy
+    - make docker-logout
+
+deploy:docker:astsrk.kinopark.kz_13:
+  stage: deploy
+  tags: [deploy.ducket.kassa.astsrk.kinopark.kz_13]
+  <<: *prod-only
+  script:
+    - make variables
+    - make clean
+    - make structure
+    - make docker-build
+    - make docker-login
+    - make docker-publish-registry
+    - make docker-deploy
+    - make docker-logout
+
+deploy:docker:astkrn.kinopark.kz_14:
+  stage: deploy
+  tags: [deploy.ducket.kassa.astkrn.kinopark.kz_14]
+  <<: *prod-only
+  script:
+    - make variables
+    - make clean
+    - make structure
+    - make docker-build
+    - make docker-login
+    - make docker-publish-registry
+    - make docker-deploy
+    - make docker-logout
+
+deploy:docker:almsptnk.kinopark.kz_15:
+  stage: deploy
+  tags: [deploy.ducket.kassa.almsptnk.kinopark.kz_15]
+  <<: *prod-only
+  script:
+    - make variables
+    - make clean
+    - make structure
+    - make docker-build
+    - make docker-login
+    - make docker-publish-registry
+    - make docker-deploy
+    - make docker-logout
+
+deploy:docker:aktbmega.kinopark.kz_16:
+  stage: deploy
+  tags: [deploy.ducket.kassa.aktbmega.kinopark.kz_16]
+  <<: *prod-only
+  script:
+    - make variables
+    - make clean
+    - make structure
+    - make docker-build
+    - make docker-login
+    - make docker-publish-registry
+    - make docker-deploy
+    - make docker-logout
+
+deploy:docker:almglbs.kinopark.kz_17:
+  stage: deploy
+  tags: [deploy.ducket.kassa.almglbs.kinopark.kz_17]
+  <<: *prod-only
+  script:
+    - make variables
+    - make clean
+    - make structure
+    - make docker-build
+    - make docker-login
+    - make docker-publish-registry
+    - make docker-deploy
+    - make docker-logout
+
+deploy:docker:almesnt.kinopark.kz_18:
+  stage: deploy
+  tags: [deploy.ducket.kassa.almesnt.kinopark.kz_18]
+  <<: *prod-only
+  script:
+    - make variables
+    - make clean
+    - make structure
+    - make docker-build
+    - make docker-login
+    - make docker-publish-registry
+    - make docker-deploy
+    - make docker-logout
+
+deploy:docker:almmskv.kinopark.kz_19:
+  stage: deploy
+  tags: [deploy.ducket.kassa.almmskv.kinopark.kz_19]
+  <<: *prod-only
+  script:
+    - make variables
+    - make clean
+    - make structure
+    - make docker-build
+    - make docker-login
+    - make docker-publish-registry
+    - make docker-deploy
+    - make docker-logout
+
+deploy:docker:almsrka.kinoplexx.kz_21:
+  stage: deploy
+  tags: [deploy.ducket.kassa.almsrka.kinoplexx.kz_21]
+  <<: *prod-only
+  script:
+    - make variables
+    - make clean
+    - make structure
+    - make docker-build
+    - make docker-login
+    - make docker-publish-registry
+    - make docker-deploy
+    - make docker-logout
+
+deploy:docker:krgdct.kinoplexx.kz_22:
+  stage: deploy
+  tags: [deploy.ducket.kassa.krgdct.kinoplexx.kz_22]
+  <<: *prod-only
+  script:
+    - make variables
+    - make clean
+    - make structure
+    - make docker-build
+    - make docker-login
+    - make docker-publish-registry
+    - make docker-deploy
+    - make docker-logout
+
+deploy:docker:aktau.kinoplexx.kz_23:
+  stage: deploy
+  tags: [deploy.ducket.kassa.aktau.kinoplexx.kz_23]
+  <<: *prod-only
+  script:
+    - make variables
+    - make clean
+    - make structure
+    - make docker-build
+    - make docker-login
+    - make docker-publish-registry
+    - make docker-deploy
+    - make docker-logout
+
+deploy:docker:atyrau.kinoplexx.kz_24:
+  stage: deploy
+  tags: [deploy.ducket.kassa.atyrau.kinoplexx.kz_24]
+  <<: *prod-only
+  script:
+    - make variables
+    - make clean
+    - make structure
+    - make docker-build
+    - make docker-login
+    - make docker-publish-registry
+    - make docker-deploy
+    - make docker-logout
+
+deploy:docker:uralsk.kinoplexx.kz_25:
+  stage: deploy
+  tags: [deploy.ducket.kassa.uralsk.kinoplexx.kz_25]
+  <<: *prod-only
+  script:
+    - make variables
+    - make clean
+    - make structure
+    - make docker-build
+    - make docker-login
+    - make docker-publish-registry
+    - make docker-deploy
+    - make docker-logout
+
+deploy:docker:kzlrdarct.kinoplexx.kz_26:
+  stage: deploy
+  tags: [deploy.ducket.kassa.kzlrdarct.kinoplexx.kz_26]
+  <<: *prod-only
+  script:
+    - make variables
+    - make clean
+    - make structure
+    - make docker-build
+    - make docker-login
+    - make docker-publish-registry
+    - make docker-deploy
+    - make docker-logout
+
+deploy:docker:almaprt.kinoplexx.kz_27:
+  stage: deploy
+  tags: [deploy.ducket.kassa.almaprt.kinoplexx.kz_27]
+  <<: *prod-only
+  script:
+    - make variables
+    - make clean
+    - make structure
+    - make docker-build
+    - make docker-login
+    - make docker-publish-registry
+    - make docker-deploy
+    - make docker-logout
+
+deploy:docker:almmall.kinoplexx.kz_28:
+  stage: deploy
+  tags: [deploy.ducket.kassa.almmall.kinoplexx.kz_28]
+  <<: *prod-only
+  script:
+    - make variables
+    - make clean
+    - make structure
+    - make docker-build
+    - make docker-login
+    - make docker-publish-registry
+    - make docker-deploy
+    - make docker-logout
+
+deploy:docker:zhkgn.kinoplexx.kz_29:
+  stage: deploy
+  tags: [deploy.ducket.kassa.zhkgn.kinoplexx.kz_29]
+  <<: *prod-only
+  script:
+    - make variables
+    - make clean
+    - make structure
+    - make docker-build
+    - make docker-login
+    - make docker-publish-registry
+    - make docker-deploy
+    - make docker-logout
+
+deploy:docker:shmhprhs.kinopark.kz_51:
+  stage: deploy
+  tags: [deploy.ducket.kassa.shmhprhs.kinopark.kz_51]
+  <<: *prod-only
+  script:
+    - make variables
+    - make clean
+    - make structure
+    - make docker-build
+    - make docker-login
+    - make docker-publish-registry
+    - make docker-deploy
+    - make docker-logout
+
+deploy:docker:almkrkr.kinopark.kz_52:
+  stage: deploy
+  tags: [deploy.ducket.kassa.almkrkr.kinopark.kz_52]
+  <<: *prod-only
+  script:
+    - make variables
+    - make clean
+    - make structure
+    - make docker-build
+    - make docker-login
+    - make docker-publish-registry
+    - make docker-deploy
+    - make docker-logout
+
+deploy:docker:shmnrzprk.kinopark.kz_53:
+  stage: deploy
+  tags: [deploy.ducket.kassa.shmnrzprk.kinopark.kz_53]
+  <<: *prod-only
+  script:
+    - make variables
+    - make clean
+    - make structure
+    - make docker-build
+    - make docker-login
+    - make docker-publish-registry
+    - make docker-deploy
+    - make docker-logout
+
+deploy:docker:almfrm.kinopark.kz_54:
+  stage: deploy
+  tags: [deploy.ducket.kassa.almfrm.kinopark.kz_54]
+  <<: *prod-only
+  script:
+    - make variables
+    - make clean
+    - make structure
+    - make docker-build
+    - make docker-login
+    - make docker-publish-registry
+    - make docker-deploy
+    - make docker-logout
+
+deploy:docker:trnkhnshmplz.kinopark.kz_55:
+  stage: deploy
+  tags: [deploy.ducket.kassa.trnkhnshmplz.kinopark.kz_55]
+  <<: *prod-only
+  script:
+    - make variables
+    - make clean
+    - make structure
+    - make docker-build
+    - make docker-login
+    - make docker-publish-registry
+    - make docker-deploy
+    - make docker-logout
+
+deploy:docker:ekbtmxmll.kinopark.kz_56:
+  stage: deploy
+  tags: [deploy.ducket.kassa.trnkhnshmplz.kinopark.kz_55]
+  <<: *prod-only
+  script:
+    - make variables
+    - make clean
+    - make structure
+    - make docker-build
+    - make docker-login
+    - make docker-publish-registry
+    - make docker-deploy
+    - make docker-logout
+
+deploy:docker:kvskmll.kinopark.com.ua_61:
+  stage: deploy
+  tags: [deploy.ducket.kassa.kvskmll.kinopark.com.ua_61]
+  <<: *prod-only
+  script:
+    - make variables
+    - make clean
+    - make structure
+    - make docker-build
+    - make docker-login
+    - make docker-publish-registry
+    - make docker-deploy
+    - make docker-logout
+
+deploy:docker:tshkntyldzcnm.uz.hq.kz_62:
+  stage: deploy
+  tags: [deploy.ducket.kassa.tshkntyldzcnm.uz.hq.kz_62]
+  <<: *prod-only
+  script:
+    - make variables
+    - make clean
+    - make structure
+    - make docker-build
+    - make docker-login
+    - make docker-publish-registry
+    - make docker-deploy
+    - make docker-logout

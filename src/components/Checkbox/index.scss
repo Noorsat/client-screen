@@ -1,0 +1,66 @@
+@import 'src/assets/scss/vars.scss';
+
+$mark_size: 15px;
+
+.checkbox {
+  display: block;
+  position: relative;
+  padding-left: $mark_size;
+  padding-bottom: 0;
+  cursor: pointer;
+  font-size: 20px;
+  .checkbox__subtitle {
+    color: $red;
+    font-size: 13px;
+    line-height: 22px;
+  }
+}
+
+
+// input[type=checkbox] {
+//   visibility: hidden;
+//   display: none;
+// }
+
+.mark {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  height: $mark_size;
+  width: $mark_size;
+  background-color: transparent;
+  border: 1px solid $grey;
+  border-radius: $base_border_radius;
+}
+
+.checkbox input:active + .mark {
+  background-color: $red;
+  border: none;
+}
+
+.checkbox input:checked + .mark {
+  background-color: $red;
+  border: none;
+}
+
+.mark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkbox input:checked ~ .mark:after {
+  display: block;
+}
+
+.checkbox .mark:after {
+  left: 6px;
+  bottom: 3.5px;
+  width: 4px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}

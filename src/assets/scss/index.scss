@@ -1,0 +1,129 @@
+@import "vendor";
+@import "vars";
+@import "core";
+@import "typography";
+@import "custom-spacing";
+//@import '~antd/dist/antd.css';
+
+body, html {
+  @extend .fill;
+  @extend .clear;
+  @extend .font;
+  color: $black;
+  background-color: $white;
+  scroll-behavior: smooth;
+}
+
+.container {
+  width: 100%;
+  padding-right: 0;
+  padding-left: 0;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: $extra_large_device) {
+  .container {
+    max-width: 1040px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+@media (max-width: $extra_large_device) {
+  .container {
+    max-width: 1040px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media (max-width: $large_device) {
+  .container {
+    max-width: 960px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+@media (max-width: $medium_device) {
+  .container {
+    max-width: 720px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    max-width: 540px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+#root {
+  @extend .fill;
+  @extend .clear;
+}
+
+*::selection {
+  color: black;
+  background: $grey;
+}
+
+img::selection {
+  background: 0;
+}
+
+// text sizing
+p, a, button {
+  @extend .clear;
+  @extend .font;
+  font-size: $body_size;
+  font-weight: $regular_weight;
+  text-decoration: none;
+}
+li, ol, ul, span {
+  @extend .clear;
+  @extend .font;
+  font-size: $body_size;
+  font-weight: $regular_weight;
+  list-style: none;
+}
+
+// Button
+button {
+  @extend .pointer;
+  border: 0;
+  outline: 0;
+  background: 0;
+}
+
+.disabled {
+  opacity: .5;
+  user-select: none !important;
+  pointer-events: none !important;
+}
+
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+// Inputs
+input {
+  border: 0;
+  outline: 0;
+  background: 0;
+}
+
+.m-center {
+  display: block!important;
+  margin: 0 auto;
+}
+
+.inner-html * {
+  font-family: $fonts;
+}

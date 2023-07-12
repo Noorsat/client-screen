@@ -1,0 +1,227 @@
+@import 'src/assets/scss/vars';
+
+$group_card_dropdown_padding: 4px;
+$group_card_dropdown_lh: 14px;
+
+.width-limit {
+  max-width: 1024px;
+  overflow-x: hidden;
+}
+.client{
+  max-width: 1024px!important;
+}
+.left-container {
+  width: 100%;
+  max-width: 1024px;
+  &--mini {
+    max-width: 758px;
+  }
+}
+
+.top-content {
+  max-width: 758px;
+}
+.top-time {
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.38px;
+  min-width: 276px;
+}
+
+.basket-btn {
+  position: fixed;
+  right: 0;
+  top: 0px;
+  z-index: 1024;
+  width: 40px;
+  height: 40px;
+  padding: 6px 12px;
+  border-radius: 6px 0px 0px 6px;
+  .basket-btn__img {
+    &--rotate {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.slider-btn {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  width: 68.67px;
+  min-width: 132px;
+  height: 26px;
+  background: #F2F2F6;
+  border-radius: 4px;
+
+  &--active {
+    background: #308add;
+  }
+
+  &__text {
+    font-weight: 700;
+    font-size: 16px;
+    color: #4d4d4f;
+    &--active {
+      color: #e4f0f9;
+    }
+  }
+}
+
+.total__sum{
+  font-weight: 700;
+  font-size: 24px;
+  color: #4d4d4f;
+  text-align: right;
+}
+
+.buttons-slider {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  .slick-track {
+    display: flex;
+  }
+  .slick-slide {
+    margin-right: 12px;
+  }
+  .slick-prev {
+    left: 8px;
+  }
+  .slick-next {
+    right: 8px;
+  }
+  .slick-clone {
+    display: none;
+  }
+  .slick-next, .slick-prev {
+    position: absolute;
+    display: flex !important;
+    z-index:1;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 24px;
+    background: rgba(128, 128, 128, 0.4);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25), 0px 0px 16px rgba(0, 0, 0, 0.25),
+    inset 0px 0.5px 0px rgba(255, 255, 255, 0.1);
+  }
+  .slick-prev{
+    left: -20px;
+    top:13px;
+  }
+  .slick-next{
+    right: -30px;
+    top:13px;
+  }
+}
+
+.close-btn {
+  border: none;
+  color: $light_red;
+}
+
+.right-basket {
+  width: 266px;
+  background: #F2F2F6;
+  min-height: 100vh;
+  transition: transform 300ms ease-in;
+  transform: translateX(100%);
+  &--visible {
+    transform: translateX(0);
+  }
+  .right-basket__title {
+    padding: 30px 0;
+    border-bottom: 1px solid rgba(#222834, .2);
+  }
+  .right-basket__empty-content {
+    margin-top: 218px;
+  }
+  .right-basket__content {
+    padding: 10px 10px;
+  }
+  .basket-item__age {
+    width: 24px;
+    min-width: 24px;
+    height: 24px;
+    min-height: 24px;
+    background: #ffd362;
+    border-radius: 4px;
+    transform: rotate(45deg);
+    margin-left: 12px;
+  }
+  .basket-item__age-text {
+    font-weight: 700;
+    font-size: 13px;
+    color: #303030;
+    transform: rotate(-45deg);
+  }
+  .basket-dropdown {
+    button {
+      width: 100%;
+      justify-content: space-between;
+      img {
+        //width: 24px;
+        //height: 24px;
+      }
+    }
+    .dd-list {
+      left: 0;
+      box-shadow: 0 2px 8px rgba(black, 0.32);
+    }
+    .dd-list__item-button {
+      height: 40px;
+      border: none;
+      //font-size: $caption_size;
+      padding: $group_card_dropdown_padding 2 * $group_card_dropdown_padding !important;
+      line-height: $group_card_dropdown_lh !important;
+    }
+  }
+
+  .color_secondary {
+    color: #A3A7B0;
+  }
+  .color_white {
+    color: #FFFFFF;
+  }
+}
+
+.ant-select-selector {
+  height: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  border: 1px solid #222834 !important;
+  border-radius: 6px !important;
+}
+
+.spin{
+  position: absolute;
+  top:0;
+  left:0;
+  width:100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.05);
+  z-index:900000000000000000000000;
+}
+.tickets{
+  display: flex;
+  justify-content: center;
+  gap:30px;
+}
+.tickets__item{
+  border-radius: 6px;
+  background: #464F60;
+  padding: 10px;
+  color:#fff;
+  width: fit-content;
+  margin-bottom: 10px;
+}

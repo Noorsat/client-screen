@@ -1,0 +1,150 @@
+@import 'vars';
+
+.typography {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+}
+
+.typography__variant-h1 {
+   font-weight: $bold_weight;
+   font-size: $h1_size;
+ }
+
+.typography__variant-h1light {
+  font-weight: $light_weight;
+  font-size: $h1_size;
+}
+
+.typography__variant-h2 {
+  font-weight: $bold_weight;
+  font-size: $h2_size;
+}
+
+.typography__variant-h2light {
+  font-weight: $light_weight;
+  font-size: $h2_size;
+}
+
+.typography__variant-h3 {
+  font-weight: $bold_weight;
+  font-size: $h3_size;
+}
+
+.typography__variant-h3reg {
+  font-weight: $regular_weight;
+  font-size: $h3_size;
+}
+
+.typography__variant-body {
+  font-weight: $regular_weight;
+  font-size: $body_size;
+}
+
+.typography__variant-bodybold {
+  font-weight: $bold_weight;
+  font-size: $body_size;
+}
+
+.typography__variant-subbody {
+  font-weight: $regular_weight;
+  font-size: $sub_body_size;
+
+  .inner-html>p {
+    font-weight: $regular_weight;
+    font-size: $sub_body_size;
+  }
+}
+
+.typography__variant-subbodybold {
+  font-weight: $bold_weight;
+  font-size: $sub_body_size;
+}
+
+.typography__variant-caption {
+  font-weight: $regular_weight;
+  font-size: $caption_size;
+
+  .inner-html>p {
+    font-weight: $regular_weight;
+    font-size: $caption_size;
+  }
+}
+
+.typography__variant-captionbold {
+  font-weight: $bold_weight;
+  font-size: $caption_size;
+}
+
+@media (max-width: $medium_device) {
+  .typography__variant-mobile-h1 {
+    font-weight: $bold_weight;
+    font-size: $h1_size;
+  }
+
+  .typography__variant-mobile-h1light {
+    font-weight: $light_weight;
+    font-size: $h1_size;
+  }
+
+  .typography__variant-mobile-h2 {
+    font-weight: $bold_weight;
+    font-size: $h2_size;
+  }
+
+  .typography__variant-mobile-h2light {
+    font-weight: $light_weight;
+    font-size: $h2_size;
+  }
+
+  .typography__variant-mobile-h3 {
+    font-weight: $bold_weight;
+    font-size: $h3_size;
+  }
+
+  .typography__variant-mobile-h3reg {
+    font-weight: $regular_weight;
+    font-size: $h3_size;
+  }
+
+  .typography__variant-mobile-body {
+    font-weight: $regular_weight;
+    font-size: $body_size;
+  }
+
+  .typography__variant-mobile-bodybold {
+    font-weight: $bold_weight;
+    font-size: $body_size;
+  }
+
+  .typography__variant-mobile-subbody {
+    font-weight: $regular_weight;
+    font-size: $sub_body_size;
+
+    .inner-html>p {
+      font-weight: $regular_weight;
+      font-size: $sub_body_size;
+    }
+  }
+
+  .typography__variant-mobile-subbodybold {
+    font-weight: $bold_weight;
+    font-size: $sub_body_size;
+  }
+
+  .typography__variant-mobile-caption {
+    font-weight: $regular_weight;
+    font-size: $caption_size;
+
+    .inner-html>p {
+      font-weight: $regular_weight;
+      font-size: $caption_size;
+    }
+  }
+
+  .typography__variant-mobile-captionbold {
+    font-weight: $bold_weight;
+    font-size: $caption_size;
+  }
+
+}

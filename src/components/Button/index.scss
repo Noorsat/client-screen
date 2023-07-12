@@ -1,0 +1,233 @@
+@import 'src/assets/scss/vars';
+
+$padding: 8px;
+$yellow_hover: #FFE39B;
+$button_chip_br: 22px;
+$button_chip_padding: 4px;
+
+@mixin set-icons-padding($pad) {
+  .button__icon-right {
+    padding-left: $pad;
+  }
+
+  .button__icon-left {
+    padding-right: $pad;
+  }
+}
+
+@mixin set-underline($color) {
+  box-shadow: inset 0 -2px 0 $color;
+}
+
+.button {
+  @extend .button--color-default;
+
+  display: inline-block;
+  font-weight: $bold_weight;
+  text-align: center;
+  white-space: nowrap;
+  user-select: none;
+  padding: $padding ($padding * 2);
+  @include set-icons-padding($padding);
+
+}
+
+.button--underlined {
+  @include set-underline($black);
+}
+
+.button--cropped {
+  border-radius: 0;
+  padding: $padding 0;
+  background-color: transparent;
+
+}
+
+.button--border-radius-none {
+  border-radius: 0;
+}
+
+.button--color-default {
+  color: $black;
+  // background-color: rgba($black, 0.07);
+  border-color: $black;
+}
+
+@each $key, $value in $colors {
+  $class_name: "button--color-#{$key}";
+  $color: rgba($value, 1);
+
+  .#{$class_name} {
+    color: white;
+    background-color: $color;
+    border-color: $color;
+
+    &:hover {
+      background-color: rgba($value, 0.8);
+    }
+  }
+
+  .button--outlined.#{$class_name} {
+    color: $color;
+
+    &:hover {
+      background-color: rgba($value, 0.05);
+    }
+  }
+
+  .button--flat.#{$class_name} {
+    color: $color;
+    &:hover {
+      color: $red;
+      background-color: transparent;
+    }
+    }
+
+  .button--underlined.#{$class_name} {
+    @include set-underline($value);
+  }
+}
+
+.button--outlined {
+  background-color: transparent;
+  border-width: 1px;
+  border-style: solid;
+  box-shadow: none;
+
+  &:hover {
+    background-color: rgba($black, 0.05);
+  }
+}
+
+.button--flat {
+  color: $black;
+  background: transparent;
+  border-radius: 0;
+}
+
+.button--type-red {
+  background: $red;
+  color: white;
+}
+
+.button--type-red:hover, .button--type-red:focus {
+  background: $light_red;
+}
+
+.button--type-yellow {
+  background: $yellow;
+  color: $black;
+}
+
+.button--type-yellow:hover, .button--type-yellow:focus {
+  background: $yellow_hover;
+}
+
+.button--type-yellow_orange {
+  background: #fabb34;
+  color: $black;
+}
+
+.button--type-yellow_orange:hover, .button--type-yellow_orange:focus {
+  background: $yellow_hover;
+}
+
+.button--type-transparent{
+  background: transparent;
+  color: $black;
+  border: 1px solid $red;
+}
+
+.button--type-transparent:hover, .button--type-transparent:focus {
+  background: $red;
+}
+
+.button--type-transparent_red{
+  background: transparent;
+  color: $red;
+  border: 1px solid $red;
+}
+
+.button--type-transparent_red:hover, .button--type-transparent_red:focus {
+  color: $white;
+  background: $red;
+}
+
+.button--type-transparent_red-bold {
+  background: transparent;
+  color: $red;
+  border: 2px solid $red;
+}
+
+.button--type-transparent_red-bold:hover, .button--type-transparent_red-bold:focus {
+  color: $white;
+  background: $red;
+}
+
+.button--type-transparent.disabled {
+  background: transparent;
+  border-color: $dark_grey;
+  color: $grey;
+}
+
+.button--type-white {
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+}
+
+.button--type-white--2 {
+  background: transparent;
+  color: white;
+}
+
+.button--type-white:hover, .button--type-white:focus {
+  background: white;
+  color: $black;
+}
+
+.button--type-white-with_flag {
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+  padding-right: 6px;
+  padding-left: 26px;
+}
+
+.button--type-white-with_flag:hover, .button--type-white-with_flag:focus {
+  background: white;
+  color: $black;
+}
+
+.button--type-chip {
+  background: $light_grey;
+  padding: $button_chip_padding;
+  color: $black;
+  border-radius: $button_chip_br;
+}
+
+.button--type-chip-dark_grey {
+  background: $grey_700;
+  padding: $button_chip_padding;
+  color: $white;
+  border-radius: $button_chip_br;
+}
+
+.button--type-chip-yellow {
+  background: $yellow;
+  padding: $button_chip_padding;
+  color: $black;
+  border-radius: $button_chip_br;
+}
+
+.button--type-light_blue {
+  background: transparent;
+  color:white;
+  border: 2px solid $light_blue;
+}
+
+.button--type-secondary {
+  background: transparent;
+  color: #303030;;
+  border: 1px solid #303030;;
+}

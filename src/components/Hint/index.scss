@@ -1,0 +1,29 @@
+@import 'src/assets/scss/vars.scss';
+
+.tippy-tooltip.light-theme {
+  color: $black;
+  background-color: $light_grey;
+  padding: 0;
+  border-radius: $base_border_radius;
+  box-shadow: 0 0 24px rgba(0, 0, 0, 0.5);
+  pointer-events: auto;
+}
+
+.tippy-tooltip.white-theme {
+  color: $black;
+  background-color: $white;
+  padding: 0;
+  border-radius: $base_border_radius;
+  box-shadow: 0 0 24px rgba(0, 0, 0, 0.5);
+  pointer-events: auto;
+}
+
+.tippy-tooltip.light-theme .tippy-arrow {
+  border-top-color: $light_grey;
+  border-bottom-color: $light_grey;
+}
+
+.tippy-tooltip.white-theme .tippy-arrow {
+  border-top-color: $white;
+  border-bottom-color: $white;
+}

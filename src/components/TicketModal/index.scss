@@ -1,0 +1,33 @@
+@import '../../assets/scss/vars.scss';
+
+.ticket-modal {
+  display: block; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 101; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  .ticket-modal__content {
+    background-color: #fefefe;
+    margin: 16px auto; /* 15% from the top and centered */
+    padding: 16px 32px;
+    border: 1px solid #888;
+    width: 414px; /* Could be more or less, depending on screen size */
+    height: 736px;
+    max-height: 736px;
+    overflow-y: auto;
+    border-radius: 24px;
+  }
+  .ticket-modal__content__qr {
+    width: 144px;
+    height: 144px;
+  }
+  .ticket-modal__close-btn {
+    border: none;
+    color: $red;
+  }
+}

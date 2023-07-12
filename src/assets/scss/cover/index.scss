@@ -1,0 +1,9 @@
+@import "mixins";
+
+.covered {
+  @include cover($dark_grey);
+}
+
+.disabled {
+  @include disable();
+}

@@ -1,0 +1,155 @@
+@import './vars.scss';
+@import "cover/index";
+// Fonts
+.font {
+  font-family: $fonts;
+}
+
+// borders
+
+.active__border {
+  border: 2px solid $white;
+  position: relative;
+  border-radius: $base_border_radius;
+  box-sizing: border-box;
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: calc(50% - 5px);
+    bottom: -20px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    transform: rotate(90deg);
+    border-color: transparent transparent transparent $white;
+    border-width: 10px;
+  }
+}
+
+.active__border--bold {
+  border: 4px solid $red !important;
+  outline-offset: -4px;
+  position: relative;
+  border-radius: $base_border_radius;
+  box-sizing: border-box;
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: calc(50% - 5px);
+    bottom: -20px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    transform: rotate(90deg);
+    border-color: transparent transparent transparent $red;
+    border-width: 10px;
+  }
+}
+
+.active__border--none {
+  border-radius: 0 !important;
+}
+// Sizing
+.fill_w {
+  width: 100%;
+}
+.w-50 {
+  width: 50%;
+}
+.fill_h {
+  height: 100%;
+}
+.fill {
+  @extend .fill_h;
+  @extend .fill_w;
+}
+//Bootstrap-Style Width
+.w-25{
+  width: 25%;
+}
+.w-50{
+  width: 50%;
+}
+.w-75{
+  width: 75%;
+}
+//Bootstrap-Style Text-Alignment
+.text-right {
+  text-align: right !important;
+}
+.text-left {
+  text-align: left !important;
+}
+.text-center {
+  text-align: center !important;
+}
+
+.text-wrap {
+  white-space: normal;
+}
+.text-underline{
+  text-decoration: underline !important;
+}
+.pos_relative {
+  position: relative;
+}
+.pos_absolute {
+  position: absolute;
+}
+.pos_static {
+  position: static;
+}
+.pos_fixed{
+  position: fixed;
+}
+.clear_float {
+  clear: both;
+}
+.clear_float_after:after {
+  content: '';
+  display: block;
+  @extend .clear_float;
+}
+.clear {
+  margin: 0;
+  padding: 0;
+}
+
+// Decorations
+.pointer {
+  cursor: pointer;
+}
+
+// Line height
+$line-height-values : (
+  14,
+  18,
+  22,
+  28,
+  33,
+  49,
+  64
+) !default;
+// Ex: lh-14
+@each $line-height-value in $line-height-values {
+  .lh-#{$line-height-value} {
+    line-height: #{$line-height-value}#{'px!important'};
+  }
+}
+
+// Color plates
+$colors_prefix: 'color';
+@each $key, $value in $colors {
+  // example: color_red
+  .#{$colors_prefix}_#{$key} {
+    color: $value;
+  };
+  // example: color_red__bg
+  .#{$colors_prefix}_#{$key}__bg {
+    background-color: $value;
+  };
+}

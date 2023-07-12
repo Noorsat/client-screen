@@ -1,0 +1,104 @@
+@import 'src/assets/scss/vars.scss';
+
+$ticket-purchase_content_w : 764px;
+$ticket-purchase_btn_w : 396px;
+$ticket-purchase_border_rad: 3px;
+
+$modal_seats_ticket_info_width: 212px;
+
+
+.modal-seats {
+  margin-bottom: 36px;
+  .modal-seats__ticket-info {
+    //width: $modal_seats_ticket_info_width;
+  }
+  .modal-seats__clear-tickets {
+    color: rgba($white, .75);
+    text-decoration: underline;
+  }
+  .modal-seats__tickets {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 4;
+    background: #F5F6F8;
+    box-shadow: 0px -2px 8px rgba(0, 0, 0, 0.32);
+
+    .modal-seats__tickets__group {
+      overflow-x: scroll;
+      .modal-seats__tickets__group__item {
+        flex: 1 0 auto;
+        margin-right: 8px;
+        min-width: 130px;
+        max-width: 130px;
+      }
+      .modal-seats__tickets__group__item:first-child {
+        margin-left: 16px;
+      }
+      &::after {
+        content: '';
+        padding-left: 8px;
+      }
+    }
+    .modal-seats__tickets__group::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .modal-seats__hall {
+    .modal-seats__hall__legends {
+      margin-bottom: 50px;
+    }
+  }
+}
+
+.modal-seats-purchase_content_w__alert-img{
+  object-fit: contain;
+}
+
+.modal-seats__comment{
+  border: 1px solid $grey_700;
+  box-sizing: border-box;
+  border-radius: $ticket-purchase_border_rad;
+  max-width: $ticket-purchase_content_w;
+  margin-bottom: 180px;
+  margin-left: 25px;
+
+
+  .comment__ul {
+    .comment__list {
+      font-size: $sub_body_size;
+      &::before {
+        content: "\2217";
+        color:$yellow_300;
+        font-weight: bold;
+        display: inline-block;
+        width: 1em;
+        line-height:40px;
+      }
+    }
+  }
+}
+
+.color_secondary {
+  color: #A3A7B0;
+}
+
+
+@media (max-width: $medium_device) {
+  .modal-seats {
+    .modal-seats__ticket-info {
+      width: 100%
+    }
+  }
+}
+
+.near_seances-notactive{
+  display: none!important;
+}
+ 
+.slick-next{
+  position: absolute;
+  right:-100px;
+}

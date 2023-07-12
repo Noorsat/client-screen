@@ -1,0 +1,30 @@
+// Open Sans Fontface
+@font-face {
+  font-family: 'Open Sans';
+  src: url('src/static/fonts/OpenSans-Light.ttf');
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('src/static/fonts/OpenSans-Regular.ttf');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('src/static/fonts/OpenSans-Bold.ttf');
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+// Bootstrap grid system
+@import '~bootstrap/scss/bootstrap-grid';
+// Slick slider
+@import '~slick-carousel/slick/slick.css';
+@import '~slick-carousel/slick/slick-theme.css';

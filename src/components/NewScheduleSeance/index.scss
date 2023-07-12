@@ -1,0 +1,80 @@
+.seance{
+    background: #FFFFFF;
+    border: 1px solid #E3E8F2;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+    border-radius: 6px;
+    max-width: 134px;
+    width: 100%;
+    padding:8px;
+}
+.seance__top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+.seance__lang{
+    display: flex;
+    align-items: center;
+    gap:5px;
+}
+.seance__lang-icon img{
+    width: 16px;
+    position: relative;
+    bottom:1px;
+}
+.seance__lang-type{
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    color: #464F60;
+}
+.seance__hall-type{
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    color: #FFFFFF;
+    background: #222834;
+    border-radius: 4px;
+    padding:2px 6px;
+}
+.seance__middle{
+    display: flex;
+    align-items: center;
+}
+.seance__time{
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    color: #222834;
+    margin-right: 4px;
+}
+.seance__left{
+    display: flex;
+    align-items: center;
+    gap:4px;
+    background: #BEE0FF;
+    border-radius: 4px;
+    padding:2px 4px;
+}
+.seance__left-time{
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    color: #106BD6;
+}
+.seance__left-dot{
+    width: 4px;
+    height: 4px;
+    background: #106BD6;
+    border-radius: 50%;
+}
+.seance__hall{
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    color: #83868B;
+    width: fit-content;
+}

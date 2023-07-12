@@ -1,0 +1,135 @@
+.typography {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+}
+
+.typography__variant-h1 {
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+.typography__variant-h1light {
+  font-weight: 300;
+  font-size: 3rem;
+}
+
+.typography__variant-h2 {
+  font-weight: 700;
+  font-size: 2.25rem;
+}
+
+.typography__variant-h2light {
+  font-weight: 300;
+  font-size: 2.25rem;
+}
+
+.typography__variant-h3 {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.typography__variant-h3reg {
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.typography__variant-body {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.typography__variant-bodybold {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.typography__variant-subbody {
+  font-weight: 500;
+  font-size: 0.8125rem;
+}
+
+.typography__variant-subbody .inner-html > p {
+  font-weight: 500;
+  font-size: 0.8125rem;
+}
+
+.typography__variant-subbodybold {
+  font-weight: 700;
+  font-size: 0.8125rem;
+}
+
+.typography__variant-caption {
+  font-weight: 500;
+  font-size: 0.625rem;
+}
+
+.typography__variant-caption .inner-html > p {
+  font-weight: 500;
+  font-size: 0.625rem;
+}
+
+.typography__variant-captionbold {
+  font-weight: 700;
+  font-size: 0.625rem;
+}
+
+@media (max-width: 768px) {
+  .typography__variant-mobile-h1 {
+    font-weight: 700;
+    font-size: 3rem;
+  }
+  .typography__variant-mobile-h1light {
+    font-weight: 300;
+    font-size: 3rem;
+  }
+  .typography__variant-mobile-h2 {
+    font-weight: 700;
+    font-size: 2.25rem;
+  }
+  .typography__variant-mobile-h2light {
+    font-weight: 300;
+    font-size: 2.25rem;
+  }
+  .typography__variant-mobile-h3 {
+    font-weight: 700;
+    font-size: 1.5rem;
+  }
+  .typography__variant-mobile-h3reg {
+    font-weight: 500;
+    font-size: 1.5rem;
+  }
+  .typography__variant-mobile-body {
+    font-weight: 500;
+    font-size: 1rem;
+  }
+  .typography__variant-mobile-bodybold {
+    font-weight: 700;
+    font-size: 1rem;
+  }
+  .typography__variant-mobile-subbody {
+    font-weight: 500;
+    font-size: 0.8125rem;
+  }
+  .typography__variant-mobile-subbody .inner-html > p {
+    font-weight: 500;
+    font-size: 0.8125rem;
+  }
+  .typography__variant-mobile-subbodybold {
+    font-weight: 700;
+    font-size: 0.8125rem;
+  }
+  .typography__variant-mobile-caption {
+    font-weight: 500;
+    font-size: 0.625rem;
+  }
+  .typography__variant-mobile-caption .inner-html > p {
+    font-weight: 500;
+    font-size: 0.625rem;
+  }
+  .typography__variant-mobile-captionbold {
+    font-weight: 700;
+    font-size: 0.625rem;
+  }
+}
+/*# sourceMappingURL=typography.css.map */

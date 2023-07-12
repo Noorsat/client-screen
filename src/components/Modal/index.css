@@ -1,0 +1,196 @@
+.modal-order {
+  width: 100%;
+  height: 100%;
+}
+
+.search-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+.datePicker input[type="text"] {
+  width: 60px;
+}
+
+.order-info-text {
+  font-weight: 900;
+}
+
+.order-info-price {
+  font-weight: 900;
+}
+
+.order-search input[type="text"] {
+  width: 60px;
+}
+
+.right-side {
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.order-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #464F60;
+  border-radius: 6px;
+  margin-top: 2px;
+  color: white;
+  height: 50px;
+  margin-top: 5px;
+}
+
+.order-item-selected {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #464F60;
+  border-radius: 6px;
+  margin-top: 2px;
+  color: white;
+  height: 50px;
+  margin-top: 5px;
+}
+
+.order-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 8px;
+  gap: 3px;
+  width: 50%;
+}
+
+.order-info span {
+  font-size: 10px;
+}
+
+.order-details-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.order-details {
+  padding-left: 10px;
+}
+
+.kassir-info {
+  font-size: 13px;
+}
+
+.order-detail-buttons {
+  margin-left: 10%;
+  height: 0%;
+  background-color: #F2F2F6;
+  font-size: 10px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  gap: 15px;
+  border-radius: 6px;
+  padding: 4px;
+}
+
+.selected-button {
+  color: red;
+  background: #F7F9FC;
+  -webkit-box-shadow: 0px 0px 0px 0.5px rgba(0, 0, 0, 0.08), 0px 2px 6px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 0px 0px 0.5px rgba(0, 0, 0, 0.08), 0px 2px 6px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  padding: 4px 10px;
+}
+
+.normal-button {
+  padding: 4px 10px;
+}
+
+.movie-detail {
+  margin-top: 10px;
+}
+
+.my-modal {
+  width: 90vw;
+  /* Occupy the 90% of the screen width */
+  max-width: 90vw;
+}
+
+.seats-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 50px;
+}
+
+.btn-back {
+  color: black;
+  border: 2px solid #C31D28;
+  background-color: white;
+  width: 150px;
+}
+
+.btn-back-ticket {
+  color: white;
+  border: 2px solid #C31D28;
+  background-color: #C31D28;
+  width: 150px;
+}
+
+.tariff .tariff-top {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 27px;
+  letter-spacing: 0.326451px;
+}
+
+.tariff .tariff-content .table thead tr th {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #687182;
+  max-width: 216px;
+}
+
+.tariff .tariff-content .table tbody tr td {
+  max-width: 216px;
+  font-weight: 600;
+}
+
+.tariff .tariff-content .table tbody tr td:first-of-type {
+  color: #D0D1D2;
+  font-weight: 400;
+  text-align: center;
+}
+
+.tariff .tariff-content .table tbody tr td:last-of-type {
+  width: 50%;
+}
+
+.tariff .tariff-content .table-btn__sort {
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  background: none;
+  margin-left: 8px;
+}
+
+.tariff .tariff-content .table-btn__sort .sort-transform {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+/*# sourceMappingURL=index.css.map */

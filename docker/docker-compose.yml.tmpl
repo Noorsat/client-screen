@@ -1,0 +1,11 @@
+version: '3.3'
+services:
+  :service_name:
+    image: ":image"
+    labels:
+      description: ":description"
+      name: ":name"
+      container_name: ":name"
+    ports:
+      - '${PORT}:80/tcp'
+    restart: unless-stopped

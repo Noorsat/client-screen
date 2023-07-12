@@ -1,0 +1,154 @@
+@import 'src/assets/scss/vars.scss';
+
+$card_ticket_more_button_size: 16px;
+$group_card_ticket_img_size: 40px;
+$group_card_dropdown_padding: 4px;
+$group_card_dropdown_lh: 14px;
+$group_card_ticket_expand_i_size: 16px;
+$card-ticket-love_seats_color: #CE6477;
+
+.card-ticket {
+  border-radius: 6px;
+  background: #464F60;
+  padding: 10px;
+  margin-bottom: 10px;
+
+  .card-ticket__more-button {
+    height: $card_ticket_more_button_size;
+    width: $card_ticket_more_button_size;
+  }
+
+  .card-ticket-dropdown {
+    .dd-list {
+      right: 0;
+      box-shadow: 0 2px 8px rgba(black, 0.32);
+    }
+    .dd-list__item-button {
+      font-size: $caption_size;
+      padding: $group_card_dropdown_padding 2 * $group_card_dropdown_padding !important;
+      line-height: $group_card_dropdown_lh !important;
+    }
+  }
+
+  .card-ticket__info {
+    .card-ticket__info__types {
+      flex: 1;
+    }
+    .card-ticket__info__seat {
+      display: -webkit-box !important;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}
+
+.card-ticket--love-seat{
+  border: 2px solid $card-ticket-love_seats_color;
+}
+.card-ticket--wheel-seat{
+  border: 2px solid $blue;
+}
+.card-ticket--vip-seat{
+  border: 2px solid $yellow;
+}
+
+.group-card-ticket {
+  max-height: 240px;
+  width: 212px;
+  overflow-y: auto;
+
+  &--no-overflow {
+    overflow-y: visible;
+  }
+  .group-card-ticket__item:last-child:not(:only-child) {
+    margin-bottom: 0;
+    .card-ticket-dropdown {
+      .dd-list {
+        bottom: 0;
+      }
+    }
+  }
+
+  .group-card-ticket__info {
+    border: 1px solid $dark_grey;
+    border-radius: $base_border_radius;
+    .group-card-ticket__info__img-wrap {
+      width: $group_card_ticket_img_size;
+      height: auto;
+      .group-card-ticket__info__img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  &::-webkit-scrollbar {
+    width: 4px !important;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: $base_border_radius;
+    border: 0.1px solid #000000;
+    background: $light_grey !important;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: $base_border_radius;
+    background: #585858 !important;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555 !important;
+  }
+}
+
+.ticket-tariff-group {
+  border-radius: $base_border_radius;
+  .ticket-tariff {
+    border-radius: 0;
+  }
+
+  .ticket-tariff--selected {
+    color: $red;
+    border-left: 4px solid $red;
+    border-radius: 0;
+  }
+
+  .ticket-tariff:hover {
+    color: $white;
+    background: $red;
+  }
+}
+
+.group-card-ticket--expand {
+  background: $white;
+  color: $black;
+  border-radius: $base_border_radius;
+  cursor: pointer;
+  .group-card-ticket--expand__i {
+    width: $group_card_ticket_expand_i_size;
+    height: $group_card_ticket_expand_i_size;
+    vertical-align: top;
+    transition: 0.3s all;
+  }
+  .group-card-ticket--expand__i--on {
+    transform: rotate(-180deg);
+  }
+}
+
+.group-card-ticket--expand__item {
+  background: $white;
+  color: $black;
+  border-top: 1px solid $grey;
+}
+
+.group-card-ticket--expand__item:last-child {
+  border-radius: 0 0 $base_border_radius $base_border_radius;
+}
+
+.group-card-ticket--expand--on {
+  color: $red;
+  border-radius: $base_border_radius $base_border_radius 0 0;
+}

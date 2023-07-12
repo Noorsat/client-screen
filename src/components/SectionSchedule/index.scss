@@ -1,0 +1,255 @@
+@import 'src/assets/scss/vars.scss';
+@import 'src/assets/scss/cover/mixins.scss';
+
+$schedule_icon_size: 16px;
+$schedule_btn_width: 100px;
+$schedule_btn_height: 24px;
+
+.spin-export{
+  z-index:900000000000000000000000;
+}
+.export-modal .ant-modal{
+  width: fit-content!important;
+  background:transparent!important;
+}
+
+.export-modal .ant-modal-close{
+  display: none!important;
+}
+
+.export-modal .ant-modal-content{
+  background:transparent!important;
+  box-shadow: none!important;
+}
+
+.export-modal .ant-modal-footer{
+  border-top-color: transparent!important;
+}
+
+.section-schedule__table__btn-wrap {
+  div:focus {
+    outline: none;
+  }
+  .flag_img {
+    width: 22px;
+    position: absolute;
+    margin-left: 3px;
+    margin-top: 3px;
+    z-index: 1;
+  }
+}
+.section-schedule-row__table__hint-btn-wrap__text {
+  padding: 8px 12px 8px 12px !important;
+  text-align: left;
+}
+
+.section-schedule__table__hint {
+  padding: 8px 28px 8px 12px !important;
+  max-width: 672px !important;
+  .tippy-arrow {
+    left: 20px !important;
+  }
+  .section-schedule__table__hint-btn-wrap__text {
+    text-align: left;
+  }
+}
+
+
+.section-schedule {
+  .section-schedule__header {
+    .section-schedule__header__i {
+      width: $schedule_icon_size;
+      height: $schedule_icon_size;
+      color: $grey;
+    }
+  }
+  .section-schedule__content--row {
+    .section-schedule__content__item {
+      .section-schedule__content__item__div {
+        position: relative;
+        display: flex;
+        align-items: center;
+        .section-schedule__content__item__circle {
+          position: absolute;
+          width: 16px;
+          height: 16px;
+          background: $white;
+          left: -8px;
+          border-radius: 16px;
+          clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
+        }
+      }
+      .section-schedule__content__item__btn {
+        width: $schedule_btn_width;
+        height: $schedule_btn_height;
+      }
+      .flag_img {
+        width: 22px;
+        position: absolute;
+        margin-left: 13px;
+        z-index: 1;
+      }
+      .imax_logo {
+        width: 24px;
+        position: absolute;
+        right: 2px;
+        z-index: 1;
+      }
+      .hot_price_logo {
+        width: 35px;
+        position: absolute;
+        right: -10px;
+        top: -17px;
+        z-index: 1;
+      }
+    }
+    .section-schedule__content--row__text {
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 27px;
+    }
+  }
+  .section-schedule__content--grid {
+    .section-schedule__table {
+      .section-schedule__time-btn {
+        padding: 4px 26px;
+        margin-bottom: 2px;
+      }
+    }
+    .section-schedule__expand-grid-btn {
+      border-bottom: 1px dashed rgba(white, .8);
+      border-radius: 0;
+      .section-schedule__expand-btn__i {
+        width: $schedule_icon_size;
+        height: $schedule_icon_size;
+        transition: .2s all;
+      }
+      .section-schedule__expand-btn__i--expanded {
+        transform: rotate(180deg);
+        transition: .2s all;
+      }
+    }
+  }
+}
+
+.tippy-tooltip.white-theme{
+  border-radius: 8px;
+}
+
+.price-hint {
+  border-radius: 8px;
+  .price-hint__btn {
+    background: #222834;
+    color: #FFFFFF;
+    border-top: 0.5px solid #A3A7B0;
+    min-width: 225px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .price-hint__btn:hover {
+    cursor: pointer;
+    color: $white;
+    background: $red;
+  }
+
+  .price-hint__btn__selected {
+    color: $red;
+    border-left: 4px solid $red;
+    border-radius: 0;
+  }
+  .price-hint__delete {
+    padding: 10px;
+    background: #C31D28;
+    border: none;
+    border-bottom-left-radius: unset;
+    border-bottom-right-radius: unset;
+    .price-hint__delete__text {
+      color: #FFFFFF;
+    }
+  }
+  .price-hint__delete:hover {
+    cursor: pointer;
+    background: $red;
+    .price-hint__delete__text {
+      color: $white;
+    }
+  }
+  .price-hint__delete--disabled {
+    cursor: not-allowed;
+    .price-hint__delete__text{
+      color: $red;
+    }
+  }
+}
+
+.section-schedule__content-mobile {
+  .section-schedule__content-mobile__btn--loading {
+    @include cover($light_red);
+  }
+}
+@media screen and(max-width: 768px) {
+  .section-schedule {
+    .section-schedule__content__item {
+      width: calc((100% - 24px) / 4);
+      margin-right: 8px;
+    }
+
+    .section-schedule__content__item:nth-child(4n) {
+      margin-right: 0;
+    }
+
+    .section-schedule__content--row {
+      .section-schedule__content__item {
+        .section-schedule__content__item__div {
+          .section-schedule__content__item__circle {
+            width: 16px;
+            height: 16px;
+            border-radius: 16px;
+            left: -9px;
+          }
+        }
+        .section-schedule__content__item__btn {
+          width: 100%;
+          height: 24px;
+          justify-content: center;
+          &--not-justify {
+            justify-content: unset;
+          }
+        }
+        .flag_img {
+          width: 16px;
+          margin-top: 2px;
+          margin-left: 8px;
+        }
+        .imax_logo {
+          width: 20px;
+          position: absolute;
+          right: 0;
+          z-index: 1;
+        }
+      }
+      .section-schedule__content--row__text {
+        font-size: 14px;
+        font-weight: 600;
+      }
+    }
+  }
+  .section-schedule__show-more--button {
+    border: 1px solid #AAAAAA;
+    border-radius: 3px;
+  }
+
+  .section-schedule__show-less {
+    transition: max-height 1s;
+    max-height: none;
+  }
+  .section-schedule__expand-btn {
+    border: 1px solid $light_grey;
+  }
+  .section-schedule__expand-mobile-grid-btn {
+    border: 1px solid $light_grey;
+    padding: 2px;
+  }
+}
+

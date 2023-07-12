@@ -1,0 +1,38 @@
+.header{
+    border-bottom: 1px solid #D8DCE4;
+    
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding:24px 16px 24px 24px;
+
+        &-left{
+            width: 100%;
+        }
+
+        &-right{
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__time{
+        font-weight: 400;
+        font-size: px;
+        line-height: 18px;
+        color: #464F60;
+        margin-bottom: 4px;
+    }
+
+    &__title{
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 28px;
+        color: #222834;
+    }
+
+    &__filter{
+        margin-right: 12px;
+    }
+}

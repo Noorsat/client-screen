@@ -1,0 +1,70 @@
+.my-modal-number {
+    width: 25vw;    /* Occupy the 90% of the screen width */
+    max-width: 25vw;
+} 
+
+.modal-number {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.order-btn {
+    background-color: #222834;
+    padding: 3px;
+    padding-left: 30px;
+    padding-right: 30px;
+    color: white;
+    border-radius: 5px;
+}
+
+.col-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+    margin-bottom: 3px;
+}
+
+.button-group {
+    margin-top: 10px;
+}
+
+.form-control {
+    width: 200px;
+    text-align: center;
+}
+
+.opacity{ 
+    opacity: 0;
+}
+
+.order-icon{
+    padding: 3px;
+    padding-left: 22px;
+    padding-right: 22px;
+}
+
+
+.btn-search {
+    margin-top: 10px;
+    width: 200px;
+    color: white;
+    background-color: #C31D28;
+    border-radius: 6px;
+    text-align: center;
+
+}
+
+.btn-close-modal {
+    margin-top: 10px;
+    width: 200px;
+    text-align: center;
+
+}
+
+
+.btn-s {
+    padding: 8px;
+}

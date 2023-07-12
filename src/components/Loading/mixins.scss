@@ -1,0 +1,22 @@
+@mixin set-loading-border-size($size) {
+  border-width: $size;
+}
+
+@mixin set-loading-color($color) {
+  border-color: rgba($color, 0.25);
+  border-top-color: rgba($color, 1);
+}
+
+@mixin set-loading-size($size) {
+  width: $size;
+  height: $size;
+}
+
+@mixin set-loading-center() {
+  .loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    animation: centered-loading .6s infinite linear;
+  }
+}

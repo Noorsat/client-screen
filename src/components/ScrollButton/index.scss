@@ -1,0 +1,63 @@
+@import 'src/assets/scss/vars.scss';
+
+$scroll_button_size: 48px;
+$scroll_button_icon_size: 42px;
+
+.scroll-button {
+  width: $scroll_button_size;
+  height: $scroll_button_size;
+  .scroll-button_i {
+    font-size: $scroll_button_size;
+    &:hover {
+      color: $dark_grey;
+    }
+  }
+}
+
+.scroll-button_i--up {
+  transform: rotate(180deg);
+  &.scroll-button_i {
+    animation: bounceUp 2s infinite;
+    transition: bounceUp .3s ease-in-out;
+    @keyframes bounceUp {
+      0% {
+        transform: rotate(180deg) translate(0, 0);
+      }
+      20% {
+        transform: rotate(180deg) translate(0, 15px);
+      }
+      40% {
+        transform: rotate(180deg) translate(0, 0);
+      }
+    }
+  }
+}
+
+.scroll-button_i--down {
+  &.scroll-button_i {
+    animation: bounce 2s infinite;
+    transition: bounce .3s ease-in-out;
+    @keyframes bounce {
+      0% {
+        transform: translate(0, 0);
+      }
+      20% {
+        transform: translate(0, 15px);
+      }
+      40% {
+        transform: translate(0, 0);
+      }
+    }
+  }
+}
+
+.scroll-button--fade-out {
+  opacity: 0;
+  transition: opacity .5s;
+  pointer-events:none;
+}
+.scroll-button--fade-in {
+  transition: opacity .5s;
+  opacity: 1;
+}
+

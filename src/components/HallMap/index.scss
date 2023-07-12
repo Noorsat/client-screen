@@ -1,0 +1,277 @@
+@import 'src/assets/scss/vars.scss';
+
+$hall_map_table_cell_size: 32px;
+$hall_map_table_little_cell_size:18px;
+$hall_map_table_love_seats_size: 19px;
+$hall_map_table_love_seats_size_little: 8.5px;
+$hall_map_table_wheelchair_size: 12px;
+$hall_map_table_wheelchair_size-little: 7px;
+$hall_map_table_love_seats_mr: 2px;
+$hall_map_table_mt: 8px;
+$hall_map_table_mb: 10px;
+$hall_map_screen_size: 100px;
+$hall_map_screen_mb: 30px;
+$hall_map_love_seats_color: #CE6477;
+$hall_map_booked_color: #313131;
+
+.hall-map {
+  .hall-map__scale-changer {
+    color: #DDDDDD;
+    .hall-map__scale-img {
+      background: #4E4E4E;
+      border-radius: 3px;
+    }
+  }
+  .hall-map__screen {
+    width: 400px;
+    height: 64px;
+    margin-bottom: - $hall_map_screen_mb;
+  }
+  .hall-map__plus-minus {
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    //width: 40px;
+    .hall-map__plus-minus-img {
+      width: 40px;
+      //background: #4E4E4E;
+      //border-radius: 3px;
+    }
+  }
+  .hall-map__table {
+    &.active{
+      position: relative;
+      left:-50px;
+    }
+    .hall-map__table__row {
+      .hall-map__table__cell {
+        width: $hall_map_table_cell_size;
+        height: $hall_map_table_cell_size;
+        border-radius: 3px;
+        margin-right: $hall_map_table_mt;
+        margin-bottom: $hall_map_table_mb;
+        background: #A3A7B0;
+        color: #000;
+        cursor: pointer;
+        .hall-map__table__cell__inner {
+          width: $hall_map_table_cell_size;
+          height: $hall_map_table_cell_size;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color:#000;
+        }
+        div:focus {
+          outline: 0;
+        }
+      }
+      .active{
+        width:18px!important;
+        height:18px!important;
+      }
+      .hall-map__table__cell-little {
+        width: $hall_map_table_little_cell_size;
+        height: $hall_map_table_little_cell_size;
+        border-radius: 1px;
+        margin-right: 6px;
+        margin-bottom: 8px;
+        background: #A3A7B0;
+        cursor: pointer;
+        .hall-map__table__cell__inner {
+          &.acitve{
+            width:18px!important;
+            height:18px!important;
+          }
+          width: $hall_map_table_little_cell_size;
+          height: $hall_map_table_little_cell_size;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: relative!important;
+          bottom: 1px!important;
+          right: 1px!important;
+          color:#fff;
+        }
+        div:focus {
+          outline: 0;
+        }
+      }
+
+      .hall-map__table__cell > div {
+        width: 100%;
+        height: 100%;
+      }
+
+      .hall-map__table__cell--wheelchair {
+        background: $blue;
+        .hall-map__table__cell--wheelchair__i {
+          width: $hall_map_table_wheelchair_size;
+          height: $hall_map_table_wheelchair_size;
+        }
+        .hall-map__table__cell--wheelchair__i-little {
+          width: $hall_map_table_wheelchair_size-little;
+          height: $hall_map_table_wheelchair_size-little;
+        }
+      }
+
+      .hall-map__table__cell--wheelchair--selected {
+        background: $blue !important;
+      }
+
+      .hall-map__table__cell--vip {
+        background: none;
+        color:#222834;
+      }
+
+
+      .hall-map__table__cell--opened {
+        background: #b5d7ff !important;
+      }
+
+      .hall-map__table__cell--vip--selected {
+        background: $red;
+        color: #fff;
+      }
+
+      .hall-map__table__cell--love-seats {
+        width: $hall_map_table_love_seats_size;
+        background: none;
+        color:#222834;
+        margin-right: 10px;
+      }
+      .hall-map__table__cell--love-seats-little {
+        width: $hall_map_table_love_seats_size_little;
+        background: none;
+        color:#222834;
+      }
+
+      .hall-map__table__cell--love-seats1 {
+        margin-right: $hall_map_table_love_seats_mr;
+      }
+
+      .hall-map__table__cell--love-seats2 {
+        margin-left: 0;
+      }
+
+      .hall-map__table__cell--love-seats--selected {
+        background: $red;
+        color:#fff;
+      }
+
+      .hall-map__table__cell--booked {
+        background: #222834;
+        cursor: auto;
+        div{
+          color:#222834!important;
+        }
+      }
+
+      .hall-map__table__cell--booked.hall-map__table__cell--love-seats,
+      .hall-map__table__cell--booked.hall-map__table__cell--vip {
+        background: $hall_map_booked_color;
+      }
+
+      .hall-map__table__cell--booked.hall-map__table__cell--wheelchair {
+        .hall-map__table__cell--booked--wheelchair__i {
+          background: $dark_grey;
+          cursor: auto;
+        }
+      }
+
+      .hall-map__table__cell--empty {
+        background: none;
+        cursor: auto;
+      }
+
+      .hall-map__table__cell--selected {
+        background: $red;
+        div {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color:#fff!important;
+        }
+        div:focus {
+          outline: none;
+        }
+        .caption-little {
+          font-size: 6px;
+          line-height: 6px;
+        }
+      }
+
+      .hall-map__table__cell--selected-another{
+        background:#259603!important;
+      }
+
+      .hall-map__table__cell--reserved {
+        background: $yellow;
+        div {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        div:focus {
+          outline: none;
+        }
+        .caption-little {
+          font-size: 6px;
+          line-height: 6px;
+        }
+      }
+    }
+  }
+  .hall-map__row-markers {
+    //padding-top: $hall_map_screen_size;
+    .hall-map__row-markers__item {
+      margin-bottom: 8px;
+      height:20px;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+    }
+    .hall-map__row-markers__item-little {
+      margin-bottom: 8px;
+      height: $hall_map_table_little_cell_size;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+.hall-map__legends {
+  .hall-map__legends {
+    width: $hall_map_table_cell_size;
+    height: $hall_map_table_cell_size;
+    border-radius: $base_border_radius;
+    &--little {
+      width: $hall_map_table_little_cell_size;
+      height: $hall_map_table_little_cell_size;
+    }
+  }
+  .hall-map__legends--free {
+    background: #A3A7B0;
+  }
+  .hall-map__legends--booked {
+    background: #222834;
+  }
+  .hall-map__legends--selected {
+    background: $red;
+  }
+  .hall-map__legends--reserved {
+    background: $yellow;
+  }
+  .hall-map__legends--love-seats {
+    width: $hall_map_table_love_seats_size;
+  }
+  .hall-map__legends--vip {
+  }
+  .hall-map__legends--wheelchair {
+    background: $blue;
+    .hall-map__legends--wheelchair__i{
+      width: $hall_map_table_wheelchair_size;
+      height: $hall_map_table_wheelchair_size;
+    }
+  }
+}

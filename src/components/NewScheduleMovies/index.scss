@@ -1,0 +1,30 @@
+.movies{
+    background: #D7E4FC;
+    border-radius: 8px;
+    padding:24px;
+    margin-bottom: 16px;
+}
+.movies__title{
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    color: #222834;
+    margin-bottom: 4px;
+}
+.movies__details{
+    display: flex;
+    gap:24px;
+}
+.movies__genre, .movies__duration, .movies__age_limit{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: #83868B;
+    margin-bottom: 16px;
+}
+.seances{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 12px;
+    width: fit-content;
+}
