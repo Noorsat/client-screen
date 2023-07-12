@@ -28,7 +28,7 @@ import MultipleSeats from '../MultipleSeats';
 import { lockSeat, unlockSeat } from 'src/store/ticket';
 import { notification } from 'antd';
 import * as io from "socket.io-client"
-const socket = io.connect('192.168.70.150:3000');
+const socket = io.connect(process.env.REACT_APP_CUSTOMER_DISPLAY_API || '');
 
 function ModalSeats(props: ModalSeatsTypes.IProps) {
   const dispatch = useDispatch();

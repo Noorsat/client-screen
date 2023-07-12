@@ -17,7 +17,7 @@ import ModalOrder from '../Modal';
 import { setOpenModal } from 'src/store/modal/modalSlice';
 import { RootState } from 'src/store';
 import * as io from "socket.io-client";
-const socket = io.connect('192.168.70.150:3000');
+const socket = io.connect(process.env.REACT_APP_CUSTOMER_DISPLAY_API || '');
 
 function ScheduleBookedHint(props: SchedulePriceHintTypes.IProps) {
   const side = localStorage.getItem("side")
